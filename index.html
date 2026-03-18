@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A premium banking mini app simulation">
+    <title>Bharat Bank | Mini App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- Animated Indian Flag Showcase -->
+        <div class="bharat-showcase">
+            <div class="waving-flag">
+                <div class="stripe saffron"></div>
+                <div class="stripe white">
+                    <svg class="chakra-svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="44" stroke="#000080" stroke-width="4" fill="none"/>
+                        <circle cx="50" cy="50" r="5" fill="#000080"/>
+                        <g stroke="#000080" stroke-width="1.5">
+                            <line x1="50" y1="50" x2="50" y2="6"/><line x1="50" y1="50" x2="50" y2="94"/>
+                            <line x1="50" y1="50" x2="6" y2="50"/><line x1="50" y1="50" x2="94" y2="50"/>
+                            <line x1="50" y1="50" x2="18.9" y2="18.9"/><line x1="50" y1="50" x2="81.1" y2="81.1"/>
+                            <line x1="50" y1="50" x2="81.1" y2="18.9"/><line x1="50" y1="50" x2="18.9" y2="81.1"/>
+                            <line x1="50" y1="50" x2="33.1" y2="8.9"/><line x1="50" y1="50" x2="66.9" y2="91.1"/>
+                            <line x1="50" y1="50" x2="66.9" y2="8.9"/><line x1="50" y1="50" x2="33.1" y2="91.1"/>
+                            <line x1="50" y1="50" x2="8.9" y2="33.1"/><line x1="50" y1="50" x2="91.1" y2="66.9"/>
+                            <line x1="50" y1="50" x2="91.1" y2="33.1"/><line x1="50" y1="50" x2="8.9" y2="66.9"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="stripe green"></div>
+            </div>
+            <h1 class="bharat-text">BHARAT</h1>
+        </div>
+
+        <header class="app-header">
+            <div class="logo">
+                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" class="logo-icon flag-icon" style="border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15);">
+                    <rect width="32" height="7.33" fill="#FF9933"/>
+                    <rect y="7.33" width="32" height="7.33" fill="#FFFFFF"/>
+                    <rect y="14.66" width="32" height="7.33" fill="#138808"/>
+                    <circle cx="16" cy="11" r="2.5" stroke="#000080" stroke-width="0.8" fill="none"/>
+                    <circle cx="16" cy="11" r="0.5" fill="#000080"/>
+                </svg>
+                <span>Bharat Bank</span>
+            </div>
+            <div class="user-profile">
+                <div class="profile-img tricolor-avatar">IND</div>
+            </div>
+        </header>
+
+        <section class="balance-card">
+            <h2 class="balance-label">Total Balance</h2>
+            <div class="balance-amount" id="balance-amount">₹0.00</div>
+        </section>
+
+        <section class="actions">
+            <div class="action-card deposit-card">
+                <h3>Deposit Funds</h3>
+                <form id="deposit-form">
+                    <div class="input-group">
+                        <span class="currency-symbol">₹</span>
+                        <input type="number" id="deposit-input" placeholder="0.00" step="0.01" min="0.01" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Deposit</button>
+                </form>
+            </div>
+
+            <div class="action-card withdraw-card">
+                <h3>Withdraw Funds</h3>
+                <form id="withdraw-form">
+                    <div class="input-group">
+                        <span class="currency-symbol">₹</span>
+                        <input type="number" id="withdraw-input" placeholder="0.00" step="0.01" min="0.01" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Withdraw</button>
+                </form>
+                <div class="error-msg" id="withdraw-error">Insufficient funds</div>
+            </div>
+        </section>
+
+        <section class="transactions">
+            <div class="transactions-header">
+                <h3>Recent Transactions</h3>
+            </div>
+            <div class="transaction-list" id="transaction-list">
+                <!-- Transactions will be injected here -->
+                <div class="empty-state">No transactions yet</div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
